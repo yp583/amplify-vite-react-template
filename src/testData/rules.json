@@ -1,0 +1,58 @@
+[
+  {
+    "id": "row_1",
+    "label": "Patient Status",
+    "condition": "",
+    "jumpNextRow": "",
+    "doneWithGroup": false
+  },
+  {
+    "id": "row_2", 
+    "label": "Vital Signs",
+    "condition": "(row_1 = 'Stable' OR row_1 = 'Critical')",
+    "jumpNextRow": "",
+    "doneWithGroup": false
+  },
+  {
+    "id": "row_3",
+    "label": "Blood Pressure",
+    "condition": "row_2 = 'Yes'",
+    "jumpNextRow": "",
+    "doneWithGroup": false
+  },
+  {
+    "id": "row_4",
+    "label": "Heart Rate",
+    "condition": "row_2 = 'Yes' AND row_3 <> 'Normal'",
+    "jumpNextRow": "",
+    "doneWithGroup": false
+  },
+  {
+    "id": "row_5",
+    "label": "Temperature",
+    "condition": "(row_2 = 'Yes' AND row_1 = 'Critical') OR row_4 = 'High'",
+    "jumpNextRow": "",
+    "doneWithGroup": false
+  },
+  {
+    "id": "row_6",
+    "label": "Medications",
+    "condition": "",
+    "jumpNextRow": "",
+    "doneWithGroup": false
+  },
+  {
+    "id": "row_7",
+    "label": "Pain Level",
+    "condition": "row_6 = 'Yes'",
+    "jumpNextRow": "",
+    "doneWithGroup": false
+  },
+  {
+    "id": "row_8",
+    "label": "Pain Medication",
+    "condition": "row_7 = 'High' OR row_7 = 'Moderate'",
+    "jumpNextRow": "",
+    "doneWithGroup": true
+  }
+] 
